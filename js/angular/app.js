@@ -2,34 +2,26 @@
 
 var module = angular.module('fizzBuzz', []);
 
-module.service('FizzBuzzNumberGenerator', function(){
-	this.generateXRandomNumbers = function(number){
+module.service('FizzBuzzService', function(){
+	this.fizzBuzz = function(number){
+		var out = number % 3 === 0 ? "Fizz" : "";
+		out += number % 5 === 0 ? "Buzz" : "";
+		return out !== "" ?  out : number;
+	}
+});
+
+module.controller('FizzBuzzController', function($scope){
+	$scope.update = function (number){
 		var out = [];
 		for(var i=0; i < number; i++){
 			out.push({ number: Math.floor(Math.random() * 100000) });
 		}
-		return out;
-	}
-});
-
-module.controller('FizzBuzzController', ['$scope','FizzBuzzNumberGenerator', function($scope, generator){
-	$scope.update = function (number){
-		$scope.numbers = generator.generateXRandomNumbers(number);
+		$scope.numbers = out;
 	};
-}]);
-
-module.filter('NumberToFizzBuzz', function(){
-	return function(input){
-		var out = input % 3 === 0 ? "Fizz" : "";
-		out += input % 5 === 0 ? "Buzz" : "";
-		return out !== "" ?  out : input;
-	}
 });
 
-module.filter('NumberToClass', function(){
+module.filter('NumberToFizzBuzz', function(FizzBuzzService){
 	return function(input){
-		var out = input % 3 === 0 ? "fizz" : "";
-		out += input % 5 === 0 ? "buzz" : "";
-		return out;
+		return FizzBuzzService.fizzBuzz(input);
 	}
 });

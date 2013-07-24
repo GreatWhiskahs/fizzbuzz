@@ -119,13 +119,13 @@ body #fizz-buzz-container .fizz-buzz-entry {
   -moz-box-shadow: 2px 2px 2px rgba(50, 50, 50, 0.75);
   box-shadow: 2px 2px 2px rgba(50, 50, 50, 0.75);
 }
-body #fizz-buzz-container .fizz-buzz-entry.fizz {
+body #fizz-buzz-container .fizz-buzz-entry.Fizz {
   background: pink;
 }
-body #fizz-buzz-container .fizz-buzz-entry.buzz {
+body #fizz-buzz-container .fizz-buzz-entry.Buzz {
   background: #ffff00;
 }
-body #fizz-buzz-container .fizz-buzz-entry.fizzbuzz {
+body #fizz-buzz-container .fizz-buzz-entry.FizzBuzz {
   background: lightgreen;
 }
 body #fizz-buzz-container .fizz-buzz-entry h2 {
