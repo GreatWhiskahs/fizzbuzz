@@ -1,16 +1,16 @@
 "use strict";
 
-var module = angular.module('fizzBuzz', []);
+angular.module('fizzBuzz', [])
 
-module.service('FizzBuzzService', function(){
+.service('FizzBuzzService', function(){
 	this.fizzBuzz = function(number){
 		var out = number % 3 === 0 ? "Fizz" : "";
 		out += number % 5 === 0 ? "Buzz" : "";
 		return out !== "" ?  out : number;
 	}
-});
+})
 
-module.controller('FizzBuzzController', function($scope){
+.controller('FizzBuzzController', function($scope){
 	$scope.update = function (number){
 		var out = [];
 		for(var i=0; i < number; i++){
@@ -18,9 +18,9 @@ module.controller('FizzBuzzController', function($scope){
 		}
 		$scope.numbers = out;
 	};
-});
+})
 
-module.filter('NumberToFizzBuzz', function(FizzBuzzService){
+.filter('NumberToFizzBuzz', function(FizzBuzzService){
 	return function(input){
 		return FizzBuzzService.fizzBuzz(input);
 	}
