@@ -1,0 +1,33 @@
+<html data-ng-app="fizzBuzz">
+	<head>
+		<link rel="stylesheet" type="text/css" href="../shared/styles.css">
+		<script type="text/javascript" src="angular.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+	</head>
+
+	<body data-ng-controller="FizzBuzzController">
+		<h1>This is FizzBuzz!</h1>
+		<div id="fizz-buzz-controls">
+			<form id="sample-form" name="sample-form">
+				<label>How Many To Fizz Buzz:</label>
+				<input type="number" name="number-entry" min="0" max="100000"
+						data-ng-model="numberOfNumbersToFizzBuzz">
+				</input> 
+				
+				<button data-ng-click="update(numberOfNumbersToFizzBuzz)"
+						data-ng-disabled="sample-form.$invalid">
+						Update
+				</button>
+			</form>
+		</div>
+
+		<div id="fizz-buzz-container">
+			<div class="fizz-buzz-entry" 
+					data-ng-repeat="number in numbers"
+					data-ng-class="{{number | NumberToClass}}">
+				<h2>{{number | NumberToFizzBuzz}}</h2>
+				<h3>Given Number: {{number}}</h3>
+			</div>
+		</div>
+	</body>
+</html>

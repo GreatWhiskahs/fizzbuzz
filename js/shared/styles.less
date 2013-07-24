@@ -1,0 +1,126 @@
+/* Variables */
+@entryWidth: 100px;
+@entryHeight: 100px;
+/* End Variables */
+
+/* Mixins */
+.rounded-corners {
+     -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+
+.shallow-rounded-corners {
+     -moz-border-radius: 5x;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.box-shadow { 
+	-webkit-box-shadow: 5px 5px 5px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    5px 5px 5px rgba(50, 50, 50, 0.75);
+	box-shadow:         5px 5px 5px rgba(50, 50, 50, 0.75);
+}
+
+.shallow-box-shadow { 
+	-webkit-box-shadow: 2px 2px 2px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    2px 2px 2px rgba(50, 50, 50, 0.75);
+	box-shadow:         2px 2px 2px rgba(50, 50, 50, 0.75);
+}
+
+.section {
+	width: 95%;
+	
+	margin-top: 10px;
+ 	margin-left: auto;
+	margin-right: auto;
+
+	background-color: lightgrey;
+
+	.rounded-corners;
+	.box-shadow;
+}
+
+.adjacent {
+	margin-left: 5px;
+	margin-right: 5px;
+}
+/* End Mixins */
+
+
+body {
+	margin: 0px;
+
+	h1 { 
+		padding: 5px;
+		margin: 0px;
+		text-align: center;
+		color: white;
+
+		background: #45484d;
+		background: -moz-linear-gradient(top,  #45484d 0%, #000000 100%); 
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#45484d), color-stop(100%,#000000)); 
+		background: -webkit-linear-gradient(top,  #45484d 0%,#000000 100%);
+		background: -o-linear-gradient(top,  #45484d 0%,#000000 100%); 
+		background: -ms-linear-gradient(top,  #45484d 0%,#000000 100%); 
+		background: linear-gradient(to bottom,  #45484d 0%,#000000 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 );
+	}
+
+	#fizz-buzz-controls {
+		.section;
+
+		#sample-form {
+			padding: 10px;
+
+			label {
+				margin: 0px;
+				vertical-align: middle;
+				.adjacent
+			}
+
+			input {
+				width: 100px;
+				height: 25px;
+				.adjacent
+			}
+			button { 
+				width: 100px;
+				height: 25px;
+				.adjacent
+			}
+		}
+
+	}
+
+	#fizz-buzz-container {
+		display: inline-block;
+		display: block;
+		overflow-y: hidden;
+
+		.section;
+
+		.fizz-buzz-entry {
+			width: 200px;
+			float: left;
+			margin: 10px;
+			padding: 5px;
+			background: lightblue;
+
+			.shallow-rounded-corners;
+			.shallow-box-shadow;
+
+			h2 {
+				margin: 0px;
+				text-align: center;
+			}
+
+			h3 {
+				margin: 0px;
+				text-align: center;
+			}
+		}
+
+	}
+}
+
