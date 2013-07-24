@@ -22,11 +22,10 @@
 		</div>
 
 		<div id="fizz-buzz-container">
-			<div class="fizz-buzz-entry" 
-					data-ng-repeat="number in numbers"
-					data-ng-class="{{number | NumberToClass}}">
-				<h2>{{number | NumberToFizzBuzz}}</h2>
-				<h3>Given Number: {{number}}</h3>
+			<div class="fizz-buzz-entry {{number.number | NumberToClass}}" 
+					data-ng-repeat="number in numbers">
+				<h2>{{number.number | NumberToFizzBuzz}}</h2>
+				<h3>Given Number: {{number.number}}</h3>
 			</div>
 		</div>
 	</body>

@@ -6,7 +6,7 @@ module.service('FizzBuzzNumberGenerator', function(){
 	this.generateXRandomNumbers = function(number){
 		var out = [];
 		for(var i=0; i < number; i++){
-			out.push(Math.floor(Math.random() * 100000));
+			out.push({ number: Math.floor(Math.random() * 100000) });
 		}
 		return out;
 	}
