@@ -45,22 +45,22 @@ body #fizz-buzz-controls {
   -moz-box-shadow: 5px 5px 5px rgba(50, 50, 50, 0.75);
   box-shadow: 5px 5px 5px rgba(50, 50, 50, 0.75);
 }
-body #fizz-buzz-controls #number-to-fizz-buzz-form {
+body #fizz-buzz-controls form {
   padding: 10px;
 }
-body #fizz-buzz-controls #number-to-fizz-buzz-form label {
+body #fizz-buzz-controls form label {
   margin: 0px;
   vertical-align: middle;
   margin-left: 5px;
   margin-right: 5px;
 }
-body #fizz-buzz-controls #number-to-fizz-buzz-form input {
+body #fizz-buzz-controls form input {
   width: 100px;
   height: 25px;
   margin-left: 5px;
   margin-right: 5px;
 }
-body #fizz-buzz-controls #number-to-fizz-buzz-form button {
+body #fizz-buzz-controls form button {
   width: 100px;
   height: 25px;
   margin-left: 5px;

@@ -8,14 +8,13 @@
 	<body data-ng-controller="FizzBuzzController">
 		<h1>This is FizzBuzz!</h1>
 		<div id="fizz-buzz-controls">
-			<form id="number-to-fizz-buzz-form" name="number-to-fizz-buzz-form">
+			<form name="num-to-fizz-buzz">
 				<label>How Many To Fizz Buzz:</label>
 				<input type="number" name="number-entry" min="0" max="100000"
-						data-ng-model="numberOfNumbersToFizzBuzz">
+						data-ng-model="numToFizzBuzz">
 				</input> 
 				
-				<button data-ng-click="update(numberOfNumbersToFizzBuzz)"
-						data-ng-disabled="number-to-fizz-buzz-form.$invalid">
+				<button data-ng-click="update(numToFizzBuzz)">
 						Update
 				</button>
 			</form>
